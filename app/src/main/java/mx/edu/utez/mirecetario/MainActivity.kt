@@ -11,6 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import mx.edu.utez.mirecetario.ui.navigation.AppNavGraph
+import mx.edu.utez.mirecetario.ui.navigation.MainAppContent
 import mx.edu.utez.mirecetario.ui.theme.MiRecetarioTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,10 +21,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val navController = rememberNavController()
             MiRecetarioTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    MainAppContent(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -30,18 +33,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     MiRecetarioTheme {
-        Greeting("Android")
     }
 }
