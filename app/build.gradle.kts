@@ -56,4 +56,9 @@ dependencies {
     implementation(libs.androidx.material.icons.core)
     implementation("androidx.compose.material:material-icons-extended:1.7.8")
     implementation("androidx.navigation:navigation-compose:2.8.5")
+    // ViewModel para Jetpack Compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    //Navegación
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.compose.material.icons.extended)
 }

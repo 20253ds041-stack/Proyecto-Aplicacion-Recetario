@@ -52,7 +52,7 @@ fun PerfilScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(24.dp),
 
         ) {
         Row(
@@ -87,7 +87,7 @@ fun PerfilScreen(
         Spacer(modifier = Modifier.height(30.dp))
 
         // Input de contrasena
-        Text("Contrasena", fontSize = 28.sp,color = Color(0xFF5476AA))
+        Text("Contraseña", fontSize = 28.sp,color = Color(0xFF5476AA))
         OutlinedTextField(
             value = "contrasena",
             onValueChange = { },

@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import mx.edu.utez.mirecetario.ui.components.BarraNavegacionComponent
+import mx.edu.utez.mirecetario.ui.screens.CrearCuentaScreen
 import mx.edu.utez.mirecetario.ui.screens.CrearRecetaScreen
 import mx.edu.utez.mirecetario.ui.screens.InfoRecetaScreen
 import mx.edu.utez.mirecetario.ui.screens.InicioSesionScreen
@@ -28,6 +29,7 @@ sealed class Route(val path: String){
     object InicioSesion : Route("inicioSesion")
     object CrearCuenta : Route("crearCuenta")
     object RecetasGuardadas: Route("recetasGuardadas")
+
 }
 @Composable
 fun MainAppContent(modifier: Modifier) {
@@ -95,5 +97,6 @@ fun AppNavGraph(
         composable(Route.CrearReceta.path){
             CrearRecetaScreen(onBackClick = { navController.popBackStack() })
         }
+
     }
 }

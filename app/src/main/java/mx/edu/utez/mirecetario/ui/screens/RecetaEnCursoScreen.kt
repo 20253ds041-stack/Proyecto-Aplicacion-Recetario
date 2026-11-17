@@ -42,10 +42,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import mx.edu.utez.mirecetario.ui.components.BarraDificultadComponent
 import mx.edu.utez.mirecetario.ui.components.InputsRecetas
+import mx.edu.utez.mirecetario.ui.theme.MiRecetarioTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -204,5 +206,13 @@ fun RecetaEnCursoScreen(
             Text("No hay recetas en curso", fontSize = 40.sp, color = Color(0xFF5476AA))
             Text("Empieza una nueva Receta!", fontSize = 40.sp, color = Color(0xFF5476AA))
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun RecetaEnCursoPreview() {
+    MiRecetarioTheme() {
+        RecetaEnCursoScreen(modifier = Modifier)
     }
 }
